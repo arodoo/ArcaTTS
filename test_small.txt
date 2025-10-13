@@ -1,0 +1,3 @@
+Esto es una pruba de texto con algunos herores.
+El sistema deve detectar y corregir estos problemas.
+Tambien hay errores de gramatica y hortografia.
