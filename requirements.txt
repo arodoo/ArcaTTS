@@ -9,9 +9,7 @@ python-dotenv>=1.0.0
 # ===================================
 # TTS Module
 # ===================================
-TTS>=0.22.0
-torch>=2.1.0
-torchaudio>=2.1.0
+piper-tts>=1.0.0
 pydub>=0.25.1
 ffmpeg-python>=0.2.0
 

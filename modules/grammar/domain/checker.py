@@ -1,11 +1,16 @@
-import language_tool_python
-from typing import List, Optional
+from typing import List, Optional, Dict
 from modules.grammar.domain.models import (
     GrammarError,
     ErrorType,
     Severity
 )
-import time
+from modules.grammar.domain.lt_local import (
+    LanguageToolLocal
+)
+
+
+# Global singleton instances per language
+_TOOL_INSTANCES: Dict[str, any] = {}
 
 
 class GrammarChecker:
@@ -16,22 +21,13 @@ class GrammarChecker:
         self.tool = None
     
     def _init_tool(self) -> None:
-        """Lazy initialization with retry."""
+        """Initialize local LanguageTool."""
         if self.tool is None:
-            for attempt in range(3):
-                try:
-                    self.tool = (
-                        language_tool_python.LanguageTool(
-                            self.language,
-                            remote_server=None
-                        )
-                    )
-                    break
-                except Exception as e:
-                    if attempt < 2:
-                        time.sleep(2)
-                    else:
-                        raise
+            if self.language not in _TOOL_INSTANCES:
+                _TOOL_INSTANCES[self.language] = (
+                    LanguageToolLocal(self.language)
+                )
+            self.tool = _TOOL_INSTANCES[self.language]
     
     def check_text(
         self, 
@@ -54,27 +50,36 @@ class GrammarChecker:
     
     def _convert_match(
         self, 
-        match, 
+        match: dict, 
         line_offset: int
     ) -> GrammarError:
-        """Convert LanguageTool match to GrammarError."""
-        error_type = self._get_error_type(
-            match.ruleIssueType
+        """Convert JSON match to GrammarError."""
+        issue_type = match.get('rule', {}).get(
+            'issueType'
         )
+        error_type = self._get_error_type(issue_type)
         severity = self._get_severity(match)
+        
+        # Get first replacement if available
+        replacements = match.get('replacements', [])
+        suggestion = None
+        if replacements:
+            suggestion = replacements[0].get('value')
         
         return GrammarError(
             line_number=line_offset,
-            offset=match.offset,
-            length=match.errorLength,
+            offset=match.get('offset', 0),
+            length=match.get('length', 0),
             error_type=error_type,
             severity=severity,
-            message=match.message,
-            original_text=match.context,
-            suggested_replacement=self._get_suggestion(
-                match
+            message=match.get('message', ''),
+            original_text=match.get('context', {}).get(
+                'text', ''
             ),
-            rule_id=match.ruleId
+            suggested_replacement=suggestion,
+            rule_id=match.get('rule', {}).get(
+                'id', ''
+            )
         )
     
     def _get_error_type(
@@ -98,20 +103,22 @@ class GrammarChecker:
             ErrorType.GRAMMAR
         )
     
-    def _get_severity(self, match) -> Severity:
-        """Determine error severity."""
-        if hasattr(match, 'category'):
-            if "TYPOS" in match.category:
-                return Severity.HIGH
+    def _get_severity(self, match: dict) -> Severity:
+        """Determine error severity from JSON."""
+        category = match.get('rule', {}).get(
+            'category', {}
+        ).get('id', '')
+        
+        if "TYPOS" in category:
+            return Severity.HIGH
         return Severity.MEDIUM
     
-    def _get_suggestion(self, match) -> Optional[str]:
+    def _get_suggestion(
+        self, 
+        match: dict
+    ) -> Optional[str]:
         """Extract first suggestion if available."""
-        if match.replacements:
-            return match.replacements[0]
+        replacements = match.get('replacements', [])
+        if replacements:
+            return replacements[0].get('value')
         return None
-    
-    def close(self) -> None:
-        """Close LanguageTool connection."""
-        if self.tool:
-            self.tool.close()

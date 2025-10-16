@@ -63,7 +63,7 @@ class TextCorrector:
             with open(input_path, 'r', encoding='utf-8') as f:
                 original_text = f.read()
             
-            # Check for errors
+            # Check for errors (full text, no chunks)
             errors = self.checker.check_text(original_text)
             
             # Apply corrections if auto_fix enabled
@@ -150,7 +150,3 @@ class TextCorrector:
                 fixed_count += 1
         
         return corrected, fixed_count
-    
-    def close(self) -> None:
-        """Close resources."""
-        self.checker.close()

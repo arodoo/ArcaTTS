@@ -20,10 +20,10 @@ MinIO (S3-compatible local storage)
 ```
 
 **Key Design Decisions:**
-- ❌ **No Docker:** Direct venv for GPU pass-through & fast debug
+- ❌ **No Docker:** Direct venv for fast debug & deployment
 - ❌ **No PostgreSQL:** Redis + local JSON for persistence
 - ❌ **No FastAPI/React:** CLI-driven automation, no web overhead
-- ✅ **Direct GPU:** Unhindered CUDA access for TTS performance
+- ✅ **No Licensing:** Open-source Piper TTS (MIT license)
 - ✅ **Cost-Zero:** Runs entirely on local hardware
 
 ---
@@ -34,7 +34,7 @@ MinIO (S3-compatible local storage)
 **Task Queue:** Celery  
 **Broker/Backend:** Redis (dual role)  
 **Storage:** MinIO (local S3 API)  
-**TTS Engine:** Coqui TTS + XTTS-v2 (CUDA)  
+**TTS Engine:** Piper TTS (ONNX Runtime)  
 **Languages:** EN, ES, PT-BR  
 **Environment:** Python venv (no containers)
 
@@ -104,15 +104,16 @@ while operating cost-free locally.
 
 ---
 
-### 5. XTTS-v2 TTS Engine
-**Integration:** Direct Python import (TTS library)  
-**GPU Access:** CUDA via PyTorch (no Docker GPU passthrough)  
+### 5. Piper TTS Engine
+**Integration:** Direct Python import (piper-tts library)  
+**Runtime:** ONNX Runtime (CPU/GPU compatible)  
 **Capabilities:**
-- Voice cloning from 6-second samples
+- Open-source, no licensing restrictions
 - Multi-language synthesis (EN/ES/PT-BR)
-- High-quality 22.05kHz output
+- High-quality neural voices
+- Fast CPU inference
 
-**Performance:** Direct hardware access = max throughput
+**Performance:** Lightweight and efficient
 
 ---
 
@@ -166,17 +167,18 @@ while operating cost-free locally.
 
 ---
 
-## � Implementation Phases
+## � Implementation Status
 
-1. **Environment Setup** - venv, CUDA PyTorch, Redis, MinIO
-2. **Core TTS** - XTTS-v2 integration, direct GPU access
-3. **Text Pipeline** - Chunking logic, boundary detection
-4. **Celery Tasks** - Task definitions, worker config
-5. **Storage Layer** - MinIO buckets, upload/download
-6. **CLI Interface** - argparse commands, job dispatch
-7. **Audio Merging** - Chunk combination, normalization
-8. **Testing** - Unit tests, GPU mock for CI
-9. **Monitoring** - Celery Flower, logging to files
+✅ **Environment Setup** - Python 3.11, dependencies installed  
+✅ **Core TTS** - Piper TTS integration (license-free)  
+✅ **Text Pipeline** - Text chunking & processing logic  
+✅ **Storage Layer** - MinIO client wrapper  
+✅ **CLI Interface** - Command-line tools  
+✅ **Audio Merging** - Chunk combination with pydub  
+✅ **Celery Tasks** - Async task definitions  
+⏳ **Testing** - Piper model download & integration  
+⏳ **Redis/MinIO** - Service configuration needed  
+⏳ **Monitoring** - Celery Flower setup pending
 
 ---
 

@@ -1,0 +1,3 @@
+Esto es una prueba simple.
+El texto debe estar correcto.
+No debería haber problemas.

@@ -11,6 +11,17 @@ from pathlib import Path
 from modules.grammar.domain.corrector import TextCorrector
 
 
+# Global corrector singleton per language
+_CORRECTORS = {}
+
+
+def get_corrector(language: str) -> TextCorrector:
+    """Get or create corrector for language."""
+    if language not in _CORRECTORS:
+        _CORRECTORS[language] = TextCorrector(language)
+    return _CORRECTORS[language]
+
+
 @click.group()
 def cli():
     """Grammar correction tool."""
@@ -33,7 +44,7 @@ def check(input_file: str, language: str, verbose: bool):
     """Check file for grammar errors without fixing."""
     click.echo(f"Checking {input_file}...")
     
-    corrector = TextCorrector(language)
+    corrector = get_corrector(language)
     
     try:
         # Read file
@@ -67,8 +78,8 @@ def check(input_file: str, language: str, verbose: bool):
             f"Run 'correct' command to fix errors."
         )
     
-    finally:
-        corrector.close()
+    except Exception as e:
+        click.echo(f"\n✗ Error: {e}", err=True)
 
 
 @cli.command()
@@ -105,7 +116,7 @@ def correct(
     click.echo(f"Processing {input_file}...")
     click.echo(f"Output directory: {output_dir}")
     
-    corrector = TextCorrector(language)
+    corrector = get_corrector(language)
     
     try:
         result = corrector.correct_file(
@@ -143,8 +154,8 @@ def correct(
                 err=True
             )
     
-    finally:
-        corrector.close()
+    except Exception as e:
+        click.echo(f"\n✗ Error: {e}", err=True)
 
 
 if __name__ == '__main__':
