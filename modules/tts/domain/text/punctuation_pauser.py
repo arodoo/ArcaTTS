@@ -21,6 +21,7 @@ class PunctuationPauser:
         Replace punctuation with <silence:X> markers.
         
         Uses safe temporary markers without punctuation.
+        Preserves §PAUSEXXXX§ markers from other modules.
         
         Args:
             text: Input text with punctuation
@@ -28,7 +29,7 @@ class PunctuationPauser:
         Returns:
             Text with punctuation converted to silence markers
         """
-        # Use markers without special chars
+        # Convert punctuation to temp markers
         text = text.replace('...', '§ELLIPSIS§')
         text = text.replace('—', '§EMDASH§')
         text = text.replace('–', '§ENDASH§')
@@ -41,7 +42,7 @@ class PunctuationPauser:
         text = text.replace('!', '§EXCLAMATION§')
         text = text.replace('.', '§PERIOD§')
         
-        # Convert to silence tags
+        # Convert temp markers to silence tags
         text = text.replace('§ELLIPSIS§', 
             f"<silence:{self.config.get_pause_seconds('...')}>")
         text = text.replace('§EMDASH§', 
@@ -60,6 +61,10 @@ class PunctuationPauser:
             f"<silence:{self.config.get_pause_seconds('!')}>")
         text = text.replace('§PERIOD§', 
             f"<silence:{self.config.get_pause_seconds('.')}>")
+        
+        # Convert structural pause markers (from title/roman)
+        text = text.replace('§PAUSE2000§', '<silence:2.0>')
+        text = text.replace('§PAUSE500§', '<silence:0.5>')
         
         return text
     

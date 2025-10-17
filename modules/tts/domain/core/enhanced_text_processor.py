@@ -78,7 +78,7 @@ class EnhancedTextProcessor:
         title = lines[0].strip()
         rest = lines[1].lstrip() if len(lines) > 1 else ""
         
-        return f"{title}<silence:2.0>{rest}"
+        return f"{title}§PAUSE2000§{rest}"
     
     def _chunk_with_silences(
         self, 

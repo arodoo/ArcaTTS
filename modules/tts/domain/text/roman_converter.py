@@ -42,21 +42,21 @@ class RomanConverter:
                 
                 if num:
                     spanish = self.NUM_TO_SPANISH.get(num, roman)
-                    # Add pause after chapter number
-                    converted.append(f"{spanish}<silence:2.0>")
+                    # Use temp marker (converted later)
+                    converted.append(f"{spanish}§PAUSE2000§")
                     prev_was_roman = True
                 else:
                     converted.append(line)
-                    if line.strip():  # Only reset if non-empty
+                    if line.strip():
                         prev_was_roman = False
             else:
-                # If previous was roman and this line has content, add small warmup pause
+                # Add warmup pause after roman
                 if prev_was_roman and line.strip():
-                    converted.append(f"<silence:0.5>{line}")
+                    converted.append(f"§PAUSE500§{line}")
                     prev_was_roman = False
                 else:
                     converted.append(line)
-                    if line.strip():  # Only reset if non-empty
+                    if line.strip():
                         prev_was_roman = False
         
         return '\n'.join(converted)
