@@ -140,7 +140,7 @@ exceso, estoy un poco mareado. ¿Vamos?
 
 Buscamos a la anfitriona quien, mientras él besaba su mano, le dijo: 
 
--Me siento muy contenta; i parece usted tan feliz esta noche!... 
+-Me siento muy contenta; !parece usted tan feliz esta noche!... 
 
 La bondad de sus palabras lo emocionó y se inclinó nuevamente sobre 
 la mano; entonces ella sonrió. Tuve que arrastrarlo. En el vestíbulo 
@@ -3816,7 +3816,7 @@ su sentencia era verdad.
 
 -iNo sabes la gracia que me causaste hoy, cuando viniste a 
 preguntarme si debías anunciar a tu amigo que estás comprometido!... 
-i El ya sabe todo! ¡Estúpido infantil! ¡Ya sabe todo! ¿Cómo te olvidaste 
+!El ya sabe todo! ¡Estúpido infantil! ¡Ya sabe todo! ¿Cómo te olvidaste 
 de quitarme papel y pluma? Yo le escribí y le conté hasta el más 
 mínimo detalle, por eso no viene desde hace tantos años, porque sabe 
 
@@ -11152,7 +11152,7 @@ exclamó
 -Claro que éste es el trabajo más estúpido de todo el hotel; habiendo 
 escuchado eso durante una hora, ya conoce uno sobre poco más o 
 menos todas las preguntas que se hacen, y a las otras no es necesario 
-responder. $i no hubieras sido insolente y mal educado, si no hubieras 
+responder. No hubieras sido insolente y mal educado, si no hubieras 
 mentido, ni bebido, ni robado, entonces tal vez habría yo podido 
 emplearte junto a una de estas ventanas, pues para ello me sirven sólo 
 y exclusivamente las cabezas obtusas. 
@@ -12943,7 +12943,7 @@ Karl y la cortina.
 
 -Irme, quiero irme -dijo Karl-. ¡Déjame! ¡Déjame! 
 
--Pero no irás a estorbarlos -exclamó Robinsón-, i no se te vaya a 
+-Pero no irás a estorbarlos -exclamó Robinsón-, !no se te vaya a 
 ocurrir! 
 
 Rodeando con sus brazos el cuello de Karl, colgóse de él con todo su 
@@ -14608,7 +14608,7 @@ En una esquina vio Karl un cartel con el siguiente texto:
 «iEn el hipódromo de Clayton se contratará hoy, desde las seis de la 
 mañana hasta la medianoche, personal para el Teatro de Oklahoma! 
 ¡Os llama el gran Teatro de Oklahoma! iY llama sólo hoy, sólo una vez! 
-i El que ahora pierda la oportunidad, la perderá para siempre! ¡El que 
+!El que ahora pierda la oportunidad, la perderá para siempre! ¡El que 
 piensa en su futuro es de los nuestros! ¡Todos serán bienvenidos! ¡El 
 que quiera hacerse artista, preséntese! ¡Éste es el Teatro que está en 
 condiciones de emplear a cualquiera! ¡Cada cual tendrá su puesto! 
@@ -29108,7 +29108,7 @@ parece oportuno preguntar a las asociaciones de maestros si un maes¬
 tro de pueblo no puede encontrar un trabajo más últil que el de ir per¬ 
 siguiendo topos gigantes." 
 
-i Una equivocación imperdonable! No habían leído ni el primer ni el se¬ 
+!Una equivocación imperdonable! No habían leído ni el primer ni el se¬ 
 gundo escrito y las dos miserables palabras -topo gigante y maestro de 
 pueblo- que habían cogido apresuradamente, bastaban a los señores 
 para colocarse en escena como defensores de intereses reconocidos. 
@@ -32361,7 +32361,7 @@ tua impotencia.
 sin duda natural: perdí la costumbre de hablar. De cualquier manera, 
 nunca seguramente hubiera llegado a ser un gran orador, pero hubiese 
 dominado el lenguaje humano con fluencia normal. Pero desde muy 
-temprano tú me prohibiste la palabra; tu amenaza: " i ni una palabra de 
+temprano tú me prohibiste la palabra; tu amenaza: " !ni una palabra de 
 
 
 
@@ -38894,7 +38894,7 @@ desagradables. Pero no podría ser un animal único, tendría que tratarse
 de un rebaño, que de pronto ha invadido mis dominios,'de un gran re¬ 
 baño de seres que, aunque por encima de estos bichos, los J superen 
 en poco, ya que es muy pequeño el ruido de su trabajo. Podrían ser 
-quizás animales desconocidos, un rebaño i de paso, que me turba, sí, 
+quizás animales desconocidos, un rebaño de paso, que me turba, sí, 
 pero que pronto tendría fin. En consecuencia, podría limitarme a espe¬ 
 rar, sin realizar trabajos finalmente inútiles. Pero si son animales des¬ 
 conocidos, ¿cómo no consigo verlos? Ya he hecho muchas excavaciones 
@@ -39258,7 +39258,7 @@ parecen inherentes a su capacidad de trabajo, a la extensión de su obra
 en dirección a la mía y se resarza de ello en algún otro lado. Pero, como 
 es natural, esto no es alcanzable por negociaciones, sino sólo por la vo¬ 
 luntad del animal o por una amenaza que yo pudiese ejercer. En ambos 
-i casos será decisivo establecer si el animal sabe algo acerca ; de mí y 
+casos será decisivo establecer si el animal sabe algo acerca ; de mí y 
 qué sabe. Cuanto más reflexiono acerca de esto se me figura más im¬ 
 probable que me haya oído; es posible, aunque inimaginable, que tenga 
 noticias mías, pero con toda seguridad que no me ha oído. Mientras no 
