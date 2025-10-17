@@ -3,74 +3,446 @@ OBRAS COMPLETAS - FRANZ KAFKA
 
 ÍNDICE 
 
+INTRODUCCION 
+
+DESCRIPCION DE UNA LUCHA (1904) 
+
+CABALGATA 
+
+PASEO 
+EL GORDO 
+
+HUNDIMIENTO DEL GORDO 
+PREPARATIVOS PARA UNA BODA EN EL CAMPO (1907) 
+LOS AEROPLANOS DE BRESCIA (1909) 
+
+MUCHO RUIDO (1911) 
+
+DISCURSO SOBRE LA LENGUA YIDDISCH (1912) 
+
+LA CONDENA (1912) 
+
+AMERICA (1912) 
+
+EL FOGONERO 
+
+EL TÍO 
+
+UNA QUINTA EN LAS AFUERAS DE NUEVA YORK 
+
+CAMINO A RAMSÉS 
+
+BOTE OCCIDENTAL 
+
+EL CASO ROBINSON 
+
+UN ASILO 
+
+EL GRAN TEATRO INTEGRAL DE OKLAHOMA 
+
+LA METAMORFOSIS (1912) 
+
+CONTEMPLACIÓN (1913) 
+
+NIÑOS EN LA CARRETERA 
+
+PESENMASCARAMIENTO DE UN EMBAUCADOR 
+
+EL PASEO REPENTINO 
+
+RESOLUCIONES 
 
 
-$ DESCRIPCION DE UNA LUCHA (1904) 
-$ CABALGATA 
-$ PASEO 
-$ EL GORDO 
-$ HUNDIMIENTO DEL GORDO 
-$ PREPARATIVOS PARA UNA BODA EN EL CAMPO (1907) 
-$ LOS AEROPLANOS DE BRESCIA (1909) 
-$ MUCHO RUIDO (1911) 
-$ DISCURSO SOBRE LA LENGUA YIDDISCH (1912) 
-$ LA CONDENA (1912) 
-$ AMERICA (1912) 
-$ EL FOGONERO 
-$ EL TÍO 
-$ UNA QUINTA EN LAS AFUERAS DE NUEVA YORK 
-$ CAMINO A RAMSÉS 
-$ BOTE OCCIDENTAL 
-$ EL CASO ROBINSON 
-$ UN ASILO 
-$ EL GRAN TEATRO INTEGRAL DE OKLAHOMA 
-$ LA METAMORFOSIS (1912) 
-$ CONTEMPLACIÓN (1913) 
-$ NIÑOS EN LA CARRETERA 
-$ PESENMASCARAMIENTO DE UN EMBAUCADOR 
-$ EL PASEO REPENTINO 
-$ RESOLUCIONES 
-$ EL CAZADOR GRACCHUS 
-$ FRAGMENTO PARA EL CAZADOR GRACCHUS 
-$ UN GOLPE A LA PUERTA DEL CORTIJO 
-$ EL PUENTE 
-$ DE NOCHE 
-$ EL TIMONEL 
-$ EL TROMPO 
-$ UNA CONFUSIÓN COTIDIANA 
-$ EL JINETE DEL CUBO 
-$ EL MATRIMONIO 
-$ EL VECINO 
-$ LA PRUEBA 
-$ ABOGADOS 
-$ REGRESO AL HOGAR 
-$ COMUNIDAD 
-$ EL BUITRE 
-$ EL 
-$ PROMETEO 
-$ EL SILENCIO DE LA SIRENAS 
-$ LA FATIGA 
-$ DE LA MUERTE APARENTE 
-$ LA VERDAD SOBRE SANCHO PANZA 
-$ LA CONSTRUCCIÓN 
-$ INVESTIGACIONES DE UN PERRO 
-$ CARTA AL PADRE (1919) 
-$ EL CASTILLO (1922) 
-$ UN ARTISTA DEL HAMBRE (1923) 
-$ UNA MUJERCITA 
-$ UN ARTISTA DEL HAMBRE 
-$ UN ARTISTA DEL TRAPECIO 
-$ JOSEFINA LA CANTORA 
-$ CONSIDERACIONES ACERCA DEL PECADO 
 
-FIN DEL ÍNDICE 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LA EXCURSION A LA MONTANA 
+
+DESGRACIA DE SOLTERO 
+
+EL COMERCIANTE 
+CONTEMPLACIÓN DISTRAÍDA 
+
+CAMINO A CASA 
+
+TRANSEÚNTES 
+
+EL PASAJERO 
+
+VESTIDOS 
+LA NEGATIVA 
+
+REFLEXIONES PARA JINETES 
+
+LA VENTANA A LA CALLE 
+EL DESEO DE SER PIEL ROJA 
+
+LOS ÁRBOLES 
+
+DESDICHA 
+EL PROCESO (1914) 
+
+EN LA COLONIA PENITENCIARIA (1914) 
+
+EL MAESTRO DE PUEBLO (EL TOPO GIGANTE! (1914) 
+BLUMFELD, UN SOLTERÓN (1915) 
+
+UN MEDICO RURAL (1916) 
+
+UN MÉDICO RURAL 
+
+EL NUEVO ABOGADO 
+
+EN LA GALERÍA 
+UN VIEJO MANUSCRITO 
+
+ANTE LA LEY 
+CHACALES Y ÁRABES 
+UNA VISITA A UNA MINA 
+
+LA ALDEA MAS CERCANA 
+
+UN MENSAJE IMPERIAL 
+PREOCUPACIONES DE UN JEFE DE FAMILIA 
+
+ONCE HIJOS 
+UN FRATRICIDIO 
+
+UN SUEÑO 
+
+INFORME PARA UNA ACADEMIA 
+LA MURALLA CHINA Y OTROS RELATOS (1918) 
+
+LA MURALLA CHINA 
+EL ESCUDO DE LA CIUDAD 
+
+DE LAS ALEGORÍAS 
+
+¡OLVÍDALO! 
+
+UNA PEQUEÑA FÁBULA 
+
+POSEIDÓN 
+LA PARTIDA 
+
+UNA CRUZA 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EL CAZADOR GRACCHUS 
+
+FRAGMENTO PARA EL CAZADOR GRACCHUS 
+
+UN GOLPE A LA PUERTA DEL CORTIJO 
+
+EL PUENTE 
+
+DE NOCHE 
+EL TIMONEL 
+
+EL TROMPO 
+
+UNA CONFUSIÓN COTIDIANA 
+
+EL JINETE DEL CUBO 
+
+EL MATRIMONIO 
+
+EL VECINO 
+
+LA PRUEBA 
+
+ABOGADOS 
+REGRESO AL HOGAR 
+
+COMUNIDAD 
+
+EL BUITRE 
+
+EL 
+
+PROMETEO 
+
+EL SILENCIO DE LA SIRENAS 
+
+LA FATIGA 
+
+DE LA MUERTE APARENTE 
+LA VERDAD SOBRE SANCHO PANZA 
+
+LA CONSTRUCCIÓN 
+INVESTIGACIONES DE UN PERRO 
+CARTA AL PADRE (1919) 
+
+EL CASTILLO (1922) 
+
+UN ARTISTA DEL HAMBRE (1923) 
+
+UNA MUJERCITA 
+UN ARTISTA DEL HAMBRE 
+
+UN ARTISTA DEL TRAPECIO 
+
+JOSEFINA LA CANTORA 
+CONSIDERACIONES ACERCA DEL PECADO 
+
+
+INTRODUCCIÓN 
+
+Algunas especulaciones sobre lo kafkiano 
+
+"Moles de piedra , de un negro azulado, se acercaban en cuñas hasta el 
+mismo tren; se asomaba uno por la ventanilla y buscaba Inútilmente las 
+cumbres: allí se abrían valles oscuros , angostos , desganados , y uno 
+Indicaba con el dedo la dirección en que se perdían; allí venían anchos 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ríos correntosos que de prisa se precipitaban en forma de grandes olas , 
+sobre el quebrado cauce y , arrastrando en su seno mil olitas espu¬ 
+mosasse volcaban bajo los puentes que el tren cruzaba , tan cerca , 
+que el rostro se estremecía al hálito de su frescura", ¡Es quizás esta 
+visión desolada la del paraíso entrevisto por Kafka , ese paraíso al que 
+Kart Rossmann, el héroe de América , se resiste tan empeñosamente en 
+penetrar > a pesar de desearlo con tanta ansiedad? ¿o quizá fuera aquel 
+castillo "que se destacaba con limpieza allí arriba en el aire luminoso; la 
+nieve , que se extendía por todas partes en fina capa , revelaba 
+claramente el contorno (...) en la montaña , todo tenía un aspecto 
+despejado, todo subía con libertad en el aire , o a/ menos eso parecía 
+desde aquí"? 
+
+Desde la muerte de Franz Kafka , un 3 de julio de 1924muchas han 
+sido las interpretaciones posibles de sus obras. En los primeros 
+momentos del impacto de su publicación se destacaron las que veían en 
+K. un arquetipo del hombre en lucha contra un sistema , Lucha estéril y 
+sin esperanzas que hizo que los seudomarxistas la consideraran como 
+"de pequeño burgués angustiado". "Dónde estaba el juez que nunca 
+había visto? ¿Dónde estaba el Alto Tribunal al cual nunca había llegado? 
+(...) uno de los señores cogió la garganta a K. y el otro le clavó el 
+cuchillo a la altura del corazón , repitiendo dos veces más la operación." 
+No faltaron las explicaciones médicas y psicológicas , unas que 
+correlacionan el largo proceso de su enfermedad (No podía contener 
+sus resoplidos y, de vez en cuando , tenía que pararse a descansar. 
+Nadie lo corría"), sobre todo en el análisis de La metamorfosis , con la 
+lenta agonía de K., otras que ven en la interrelación padre-hijo la suma 
+de todas las obsesiones y complejos en esos mismos personajes ("... te 
+encontrabas enteramente absorto en el negocio, te dejabas ver sólo 
+una vez por día , causándome así una impresión tan honda , que apenas 
+llegó a disminuir alguna vez con la costumbre"), y que tan bien queda 
+expllcitada en Carta al padre. 
+
+Es indudable que el carácter común de todas estas interpretaciones , 
+hasta las más opuestas , consiste en hacer de las obras de Kafka 
+"novelas en clave", buscando en ellas motivaciones religiosas , 
+o otológicas , sociales y mitológicas. 
+
+Es innegable que en la obra de Kafka hay un condimento religioso , no 
+cabe duda que su sentimiento de la existencia tiene ciertas analogías 
+con el pensamiento de Kierkegaard; pero su obra no puede reducirse a 
+ser función de estas tesis, o de otras. Una novela no es una idea 
+abstracta oscurecida con metáforas , es un mito revelador, nos arroja 
+una nueva visión del mundo , una nueva forma de sentir lo maravilloso 
+y lo cotidiano. 
+
+
+
+En esta sociedad deshumanizada, el hombre , despojado de su 
+particularidaddeviene una cosa impersonal y fantástica. Pero esa 
+unidad de la creación poética y la vida no surgen por expresarse con 
+los mismos materiales , sino porque engendran y expresan las mismas 
+reacciones. El mundo externo e interno de Kafka son uno solo: cuando 
+él nos habla de otro mundo deja entrever que ese otro mundo está en 
+éste. Porque lo que le falta al mundo es también el mundo, se expresa 
+por su negación. "Yo he asumido intensamente la negatividad de mi 
+tiempo , que además me es muy cercano , y que no tengo derecho a 
+combatir > pero que en cierta medida tengo el derecho de representar." 
+
+Kafka no es ni un desesperado ni un revolucionario, es un testimonio 
+iluminador. Su obra es una lucha sin esperanzas. Su única salida era 
+penetrar en la muerte , abandonando así su particularidad. "Será a la 
+muerte a quien me confiaré. Resto de una creencia. Retorno al padre 
+Gran día de reconciliación." Él , que pudo a su vez ser "padre" por medio 
+del matrimonio , no aceptó serlo , de alguna manera no podía ser "un 
+nuevo origen de generaciones". 
+
+Toda su obra es una clara búsqueda de hallar un sentido a la vida , él 
+que era "más extranjero que un extranjero". Un miembro del gheto 
+judío de Praga , obligado a expresarse en alemán, enfermo -lo que lo 
+marginaba de la vida-, perdido entre el cielo y la tierra , desgajado de 
+su contexto. Judío aislado de su comunidad , pero que siente la 
+nostalgia de ella; la "ausencia del suelo , del aire , de la ley". Así como K. 
+desea aferrarse a una comunidad , penetrar en la "Gracia" en un sentido 
+teológico. Así -como lo expresa Max Brod-, El proceso y El castillo 
+serían la Justicia y la Gracia que la Divinidad nos ofrece. "¿Hasta cuánto 
+soportarás el silencio de la perrada? ¿Hasta cuánto lo soportarás? Esta 
+es la pregunta vital, más allá de todas las otras." 
+
+Ese silencio, ese silencio que la Cábala define como la voz de Dios, ese 
+silencio que es una respuesta, genera una actitud común que en Kafka 
+se expresa a través del prisma de su talento; la angustia, esa angustia 
+que nos arrastra a la muerte, pero que nos permite la lucidez necesaria 
+coma para diseccionar el proceso, como un médico que busca el secreto 
+de la vida entre la carroña y los gusanos de la muerte. 
+
+Kafka no es un escritor "negro". Este hombre desesperado y solitario 
+aspira a la normalidad con todas sus fuerzas, no quiere ser excluido de 
+la "perrada". El conflicto con el padre, no necesariamente es una 
+muestra de las tesis del psicoanálisis, ya que, además de prefigurar los 
+conflictos internos posteriores, resume en general la visión de una 
+sociedad represiva y alienante, que ahoga al individuo. Es así que 
+confiesa a Brod su proyecto de titular a toda su obra "Tentativa de 
+
+
+
+evadirse de la esfera paterna", pero donde "esfera paterna" 
+representaría en verdad a la sociedad y la religión, mejor dicho a 
+nuestras concepciones alienantes de la sociedad y la religión. 
+
+Su obra y su vida; inextricablemente ligadas, son un canto desesperado 
+de amor y temor; de rebelión y de angustia. La fuerza y la 
+trascendencia de Kafka deben buscarse en haber hallada una técnica 
+para expresar y traducir en forma literaria esa angustia. "El deseo de 
+muerte es uno de los primeros indicios que empezamos a discernir. 
+Esta vida nos parece intolerable, la otra inaccesible. Ya no se siente 
+vergüenza de querer morir; se implora desde la vieja celda que se odia, 
+ser trasladado a otra nueva, que tendremos todavía que aprender a 
+odiar." 
+
+Dentro de este universo kafkiano surge un solo personaje unificador de 
+esta realidad, intercesor entre el poder (¿Dios quizá?) y el mundo: la 
+mujer. A ella se aferra ambigua y simbólicamente; en Kafka el 
+enfrentamiento de dos tesis filosóficas -trascendencia o inmanencia es 
+un drama que debe vivirse con pleno desgarramiento. Leni, la 
+enfermera del abogado de El proceso, y Frieda, la cantinera del mesón 
+de los señores, en El castillo, representan perfectamente este poder 
+mediador. K. soportará todas las humillaciones, pero se aferrará a ellas 
+con uñas y dientes, única esperanza de redención, recuperación quizá 
+de ese período de Gracia que precedió a la Caída, ejemplificado por esa 
+misma mujer: diosa-madre-amante. En verdad, lo que separa a Tito de 
+Berenice es todo el peso del mundo, que se hunde en las más 
+profundas raíces del pasado. 
+
+Kafka es así una especie de Mesías negativo que revela el desorden 
+íntimo y absurdo del mundo. "La vida se reduce a no ser más que 
+simple existencia; no hay más drama ni lucha, sino simplemente usura 
+de la materia, caducidad." Y así hasta la muerte, asesinado por la 
+ausencia de Dios. 
+
+Tal es el mundo interior de Kafka y sus ambigüedades. No es optimista, 
+porque no ve ni muestra los medios para cambiar al mundo extirpando 
+las raíces de la alienación. Tampoco es pesimista. "Yo lucho, nadie lo 
+sabe", escribe en sus Diarios. El héroe de El proceso no se detiene 
+hasta encontrar al juez y el de El castillo nunca ceja en su búsqueda. 
+Sólo en la creación artística, en la construcción de! mito, Kafka intenta 
+liberarse de las ambigüedades de este mundo. Su técnica: el arte, la 
+creación, de hecho un desafío a la muerte. Todo artista es, a su 
+manera, un deicida. 
 
 
 "No es necesario que salgas de casa. Quédate en tu mesa y 
+
+
+
 escucha. Ni siquiera escuches , espera solamente. Ni siquiera 
 esperes , quédate solo y en silencio. El mundo llegará a ti para 
 hacerse desenmascarar; no puede dejar de hacerlo , se 
 prosternará extático a tus pies." 
+
+A. LAURENT 
 
 
 DESCRIPCIÓN DE UNA LUCHA 
@@ -104,7 +476,7 @@ que ha sido una noche, compañero! Comprendo: no está bien que se lo
 cuente; apenas nos conocemos. ¿No es así? Apenas si al llegar hemos 
 cambiado unas palabras en la escalera. Con codo, le ruego que me 
 disculpe, pero no soportaba ya la felicidad, era más fuerte que yo. Y 
-como aquí no tengo aconocidos en quienes confiar... 
+como aquí no tengo conocidos en quienes confiar... 
 
 Miré con tristeza su bello rostro arrebolado -el pastelillo de fruta que 
 me había llevado a la boca no era gran cosa y le dije: 
