@@ -5,13 +5,17 @@ import click
 from pathlib import Path
 import json
 
-from modules.tts.domain.tts_engine import TTSEngine
-from modules.tts.domain.enhanced_text_processor import EnhancedTextProcessor
-from modules.tts.domain.work_processor import WorkExtractor
-from modules.tts.domain.manifest import Manifest
-from modules.tts.domain.wav_merger import WavMerger
-from modules.tts.domain.mp3_converter import Mp3Converter
-from modules.tts.domain.silence_generator import SilenceGenerator
+from modules.tts.domain.core.tts_engine import TTSEngine
+from modules.tts.domain.core.enhanced_text_processor import (
+    EnhancedTextProcessor
+)
+from modules.tts.domain.work.work_processor import WorkExtractor
+from modules.tts.domain.manifest.manifest import Manifest
+from modules.tts.domain.audio.wav_merger import WavMerger
+from modules.tts.domain.audio.mp3_converter import Mp3Converter
+from modules.tts.domain.audio.silence_generator import (
+    SilenceGenerator
+)
 
 
 @click.command()

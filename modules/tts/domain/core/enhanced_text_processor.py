@@ -3,11 +3,11 @@ Enhanced Text Processor - With pauses and conversions.
 """
 from typing import List
 import re
-from .pause_aware_chunker import PauseAwareChunker
-from .roman_converter import RomanConverter
-from .silence_generator import SilenceGenerator
-from .punctuation_pauser import PunctuationPauser
-from .hyphenation_resolver import HyphenationResolver
+from ..text.pause_aware_chunker import PauseAwareChunker
+from ..text.roman_converter import RomanConverter
+from ..audio.silence_generator import SilenceGenerator
+from ..text.punctuation_pauser import PunctuationPauser
+from ..text.hyphenation_resolver import HyphenationResolver
 
 
 class EnhancedTextProcessor:
@@ -25,25 +25,26 @@ class EnhancedTextProcessor:
         text: str,
         add_title_pause: bool = True
     ) -> List[str]:
-        """Process work text with enhancements."""
+        """
+        Process work text with minimal intervention.
+        Let Piper handle pauses naturally.
+        """
         text = self.hyphenation.resolve(text)
-        
-        # Remove leading ellipsis (just the "...", not the whole line)
         text = self._remove_leading_ellipsis(text)
         
         if add_title_pause:
             text = self._add_title_pause(text)
         
-        # Convert Roman numerals BEFORE normalizing newlines
+        # Convert Roman numerals
         text = self.roman.convert_line(text)
         
-        # Normalize newlines AFTER Roman conversion
+        # Normalize newlines
         text = self._normalize_newlines(text)
         
-        text = self.pauser.convert_to_piper_format(
-            self.pauser.add_pauses(text)
-        )
+        # Only add prosodic markers (no pause conversion)
+        text = self.pauser.add_pauses(text)
         
+        # Chunk text (only on long silences)
         chunks = self._chunk_with_silences(text)
         
         return chunks

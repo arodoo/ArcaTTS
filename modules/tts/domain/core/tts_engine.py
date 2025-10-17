@@ -3,31 +3,23 @@ from pathlib import Path
 from piper import PiperVoice
 from piper.config import SynthesisConfig
 import wave
-from .context_analyzer import ContextAnalyzer
-from .synthesis_optimizer import SynthesisOptimizer
 
 
 class TTSEngine:
-    """Piper TTS wrapper for audio generation."""
+    """
+    Simple Piper TTS wrapper.
+    Focused on quality and correct pacing.
+    """
     
     MODEL_PATHS = {
         "es": "models/piper/es_MX-claude-high.onnx",
         "es_mx": "models/piper/es_MX-claude-high.onnx",
         "es_es": "models/piper/es_ES-sharvard-medium.onnx",
-        "en": "models/piper/en_US-lessac-medium.onnx",
-        "pt": "models/piper/pt_BR-faber-medium.onnx"
     }
     
-    def __init__(
-        self, 
-        language: str = "es",
-        enhance_quality: bool = True
-    ):
+    def __init__(self, language: str = "es_mx"):
         self.language = language
         self.voice = None
-        self.enhance_quality = enhance_quality
-        self.context_analyzer = ContextAnalyzer()
-        self.optimizer = SynthesisOptimizer()
     
     def load_model(self) -> None:
         """Load Piper voice model."""
@@ -52,14 +44,13 @@ class TTSEngine:
     def synthesize(
         self,
         text: str,
-        output_path: str,
-        speaker_wav: Optional[str] = None,
-        speed: float = 1.0,
-        sentence_silence: float = 0.2
+        output_path: str
     ) -> bool:
         """
-        Generate audio with context-aware synthesis.
-        Uses dynamic parameters for naturalness.
+        Generate audio from text.
+        
+        Uses slower speed (1.2) for better comprehension.
+        Quality-focused parameters.
         """
         if not self.voice:
             self.load_model()
@@ -70,17 +61,11 @@ class TTSEngine:
                 exist_ok=True
             )
             
-            # Analyze text context
-            context = self.context_analyzer.analyze(text)
-            params = self.optimizer.optimize(context)
-            
-            # Configure with optimized parameters
-            # NOTE: length_scale should be 1.0/speed for normal pacing
-            # Context params only adjust noise (expressiveness)
+            # Simple, quality-focused configuration
             config = SynthesisConfig(
-                length_scale=1.0 / speed,
-                noise_scale=params.noise_scale,
-                noise_w_scale=params.noise_w_scale,
+                length_scale=1.2,      # Slower for clarity
+                noise_scale=0.667,     # Natural variance
+                noise_w_scale=0.8,     # Smooth transitions
                 normalize_audio=True,
                 volume=1.0
             )
@@ -97,11 +82,11 @@ class TTSEngine:
                 f.setframerate(self.voice.config.sample_rate)
                 f.writeframes(audio_data)
             
-            # Post-process for quality
-            if self.enhance_quality:
-                self._enhance_audio(output_path)
+            # Apply audio enhancement
+            self._enhance_audio(output_path)
             
             return True
+            
         except Exception as e:
             print(f"TTS Error: {e}")
             return False
@@ -109,9 +94,7 @@ class TTSEngine:
     def _enhance_audio(self, audio_path: str) -> None:
         """Apply audio enhancements."""
         try:
-            from modules.tts.domain.audio_enhancer import (
-                AudioEnhancer
-            )
+            from ..audio.audio_enhancer import AudioEnhancer
             enhancer = AudioEnhancer()
             enhancer.enhance(audio_path, audio_path)
         except Exception as e:

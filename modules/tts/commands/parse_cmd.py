@@ -4,7 +4,9 @@ Parse Command - Generate work manifest from book.
 import click
 from pathlib import Path
 
-from modules.tts.domain.manifest_parser import ManifestParser
+from modules.tts.domain.manifest.manifest_parser import (
+    ManifestParser
+)
 
 
 @click.command()
