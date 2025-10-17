@@ -21,13 +21,19 @@ class WorkExtractor:
             return f.readlines()
     
     def extract(self, work: Work) -> str:
-        """Extract work text."""
-        start = work.start_line - 1
+        """Extract work text with title."""
+        # start_line points to title in file, skip it
+        # Skip title line + empty line after it
+        start = work.start_line + 1
         end = work.end_line
         
         content_lines = self.lines[start:end]
         
-        return ''.join(content_lines)
+        # Prepend title for TTS processing
+        title_line = work.title + '\n'
+        content = title_line + ''.join(content_lines)
+        
+        return content
     
     def save_work(self, work: Work, output_dir: Path):
         """Save work to individual file."""

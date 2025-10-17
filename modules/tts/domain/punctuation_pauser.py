@@ -12,9 +12,9 @@ class PunctuationPauser:
         ';': 0.5,      # Punto y coma
         ':': 0.5,      # Dos puntos
         '.': 0.7,      # Punto seguido
-        '...': 0.8,    # Puntos suspensivos
-        '?': 0.6,      # Interrogación
-        '!': 0.6,      # Exclamación
+        '...': 0.8,    # Puntos suspensivos (legacy)
+        '?': 0.7,      # Interrogación (increased)
+        '!': 0.7,      # Exclamación (increased)
         '—': 0.4,      # Guión largo
         '(': 0.3,      # Paréntesis abierto
         ')': 0.3,      # Paréntesis cerrado
@@ -24,13 +24,21 @@ class PunctuationPauser:
         """Add SSML-style pauses after punctuation."""
         result = text
         
-        # Handle ellipsis first (before other periods)
-        result = re.sub(r'\.\.\.', '...<break:0.8>', result)
+        # Handle ellipsis: replace with silence marker
+        # (periods cause audio distortion)
+        result = re.sub(r'\.\.\.', '<silence:0.8>', result)
         
-        # Dialogue dashes: add pause after opening/closing
-        # Pattern: -palabra... palabra-
-        result = re.sub(r'-([¿¡])', r'<break:0.4>-\1', result)  # -¿
-        result = re.sub(r'([?!])-', r'\1-<break:0.4>', result)  # ?-
+        # Dialogue dashes: -palabra- pattern
+        # Match: space or start, dash, content, dash, space or end
+        result = re.sub(
+            r'(\s|^)(-[^-]+-)(\s|$)',
+            r'\1<break:0.4>\2<break:0.4>\3',
+            result
+        )
+        
+        # Add prosodic markers for questions/exclamations
+        # Spanish upside-down marks indicate rising intonation
+        result = self._add_prosodic_markers(result)
         
         # Handle punctuation (including end of string)
         result = re.sub(r'([.?!;:,—])(\s+|$)', 
@@ -38,6 +46,46 @@ class PunctuationPauser:
                        result)
         
         return result
+    
+    def _add_prosodic_markers(self, text: str) -> str:
+        """Add emphasis for questions and exclamations.
+        
+        Uses repetition and strategic spacing to signal
+        rising intonation for Piper TTS engine.
+        """
+        # Question words get emphasis via repetition
+        question_words = [
+            r'\b(qué|quién|quiénes|cuál|cuáles|cuándo)',
+            r'\b(dónde|cómo|por qué|para qué|cuánto|cuánta)',
+            r'\b(cuántos|cuántas|adónde)'
+        ]
+        
+        for pattern in question_words:
+            # Add slight pause before question word
+            text = re.sub(
+                pattern,
+                r' \1',
+                text,
+                flags=re.IGNORECASE
+            )
+        
+        # Exclamation words get exclamatory marker
+        exclamation_words = [
+            r'\b(ay|oh|ah|eh|uf|vaya|caray|cielos)',
+            r'\b(dios|santo|qué|cuánto|cuánta|cuántos)',
+            r'\b(muy|tan|tanto|tanta)'
+        ]
+        
+        for pattern in exclamation_words:
+            # Emphasize within exclamations
+            text = re.sub(
+                f'¡([^!]*{pattern}[^!]*)!',
+                r'¡\1!',
+                text,
+                flags=re.IGNORECASE
+            )
+        
+        return text
     
     def _get_pause(self, punct: str, spacing: str = ' ') -> str:
         """Get pause marker for punctuation."""

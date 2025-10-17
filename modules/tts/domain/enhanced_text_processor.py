@@ -27,10 +27,18 @@ class EnhancedTextProcessor:
         """Process work text with enhancements."""
         text = self.hyphenation.resolve(text)
         
+        # Remove leading ellipsis (just the "...", not the whole line)
+        text = self._remove_leading_ellipsis(text)
+        
         if add_title_pause:
             text = self._add_title_pause(text)
         
+        # Convert Roman numerals BEFORE normalizing newlines
         text = self.roman.convert_line(text)
+        
+        # Normalize newlines AFTER Roman conversion
+        text = self._normalize_newlines(text)
+        
         text = self.pauser.convert_to_piper_format(
             self.pauser.add_pauses(text)
         )
@@ -38,6 +46,24 @@ class EnhancedTextProcessor:
         chunks = self._chunk_with_silences(text)
         
         return chunks
+    
+    def _remove_leading_ellipsis(self, text: str) -> str:
+        """Remove leading ellipsis from lines (editorial markers)."""
+        import re
+        # Only remove the '...' at start of lines, keep the rest
+        text = re.sub(r'^\.\.\.', '', text, flags=re.MULTILINE)
+        return text
+    
+    def _normalize_newlines(self, text: str) -> str:
+        """Replace single newlines with spaces, keep paragraphs."""
+        import re
+        # First, protect paragraph breaks (2+ newlines)
+        text = re.sub(r'\n\n+', '<!PARAGRAPH!>', text)
+        # Replace single newlines with space
+        text = text.replace('\n', ' ')
+        # Restore paragraph breaks
+        text = text.replace('<!PARAGRAPH!>', '\n\n')
+        return text
     
     def _add_title_pause(self, text: str) -> str:
         """Add pause after first line (title)."""

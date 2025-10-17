@@ -111,8 +111,16 @@ class ManifestParser:
         """Find work start (standalone title)."""
         title_clean = title.upper().strip()
         
+        # Find where ÍNDICE ends to skip searching there
+        index_end_line = 0
         for line_num, line in enumerate(self.lines, 1):
-            if line_num < 100:
+            if self.INDEX_END in line.strip():
+                index_end_line = line_num
+                break
+        
+        for line_num, line in enumerate(self.lines, 1):
+            # Skip ÍNDICE section
+            if line_num <= index_end_line:
                 continue
             
             line_clean = line.strip().upper()

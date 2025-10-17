@@ -31,6 +31,7 @@ class RomanConverter:
         
         lines = text.split('\n')
         converted = []
+        prev_was_roman = False
         
         for line in lines:
             match = re.match(pattern, line.strip())
@@ -41,12 +42,21 @@ class RomanConverter:
                 
                 if num:
                     spanish = self.NUM_TO_SPANISH.get(num, roman)
-                    converted.append(
-                        f"{spanish}\n<silence:2.0>"
-                    )
+                    # Add pause after chapter number
+                    converted.append(f"{spanish}<silence:2.0>")
+                    prev_was_roman = True
                 else:
                     converted.append(line)
+                    if line.strip():  # Only reset if non-empty
+                        prev_was_roman = False
             else:
-                converted.append(line)
+                # If previous was roman and this line has content, add small warmup pause
+                if prev_was_roman and line.strip():
+                    converted.append(f"<silence:0.5>{line}")
+                    prev_was_roman = False
+                else:
+                    converted.append(line)
+                    if line.strip():  # Only reset if non-empty
+                        prev_was_roman = False
         
         return '\n'.join(converted)
