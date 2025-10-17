@@ -3,12 +3,14 @@ from pathlib import Path
 from piper import PiperVoice
 from piper.config import SynthesisConfig
 import wave
+import re
+import numpy as np
 
 
 class TTSEngine:
     """
     Simple Piper TTS wrapper.
-    Focused on quality and correct pacing.
+    Processes <silence:X> markers for precise pauses.
     """
     
     MODEL_PATHS = {
@@ -47,10 +49,10 @@ class TTSEngine:
         output_path: str
     ) -> bool:
         """
-        Generate audio from text.
+        Generate audio from text with silence markers.
         
-        Uses slower speed (1.2) for better comprehension.
-        Quality-focused parameters.
+        Processes <silence:X> markers as real silence.
+        Uses slower speed (1.2) for clarity.
         """
         if not self.voice:
             self.load_model()
@@ -61,20 +63,32 @@ class TTSEngine:
                 exist_ok=True
             )
             
-            # Simple, quality-focused configuration
-            config = SynthesisConfig(
-                length_scale=1.2,      # Slower for clarity
-                noise_scale=0.667,     # Natural variance
-                noise_w_scale=0.8,     # Smooth transitions
-                normalize_audio=True,
-                volume=1.0
-            )
+            # Split text on silence markers
+            pattern = r'<silence:([\d.]+)>'
+            parts = re.split(pattern, text)
             
-            chunks = list(self.voice.synthesize(text, config))
-            audio_data = b''.join([
-                chunk.audio_int16_bytes 
-                for chunk in chunks
-            ])
+            audio_segments = []
+            i = 0
+            
+            while i < len(parts):
+                part = parts[i]
+                
+                # Check if this is a duration
+                if i > 0 and re.match(r'[\d.]+$', part):
+                    # Generate silence
+                    duration = float(part)
+                    silence_bytes = self._generate_silence(duration)
+                    audio_segments.append(silence_bytes)
+                    i += 1
+                else:
+                    # Generate speech
+                    if part.strip():
+                        speech_bytes = self._synthesize_text(part.strip())
+                        audio_segments.append(speech_bytes)
+                    i += 1
+            
+            # Combine all segments
+            audio_data = b''.join(audio_segments)
             
             with wave.open(output_path, 'wb') as f:
                 f.setnchannels(1)
@@ -90,6 +104,29 @@ class TTSEngine:
         except Exception as e:
             print(f"TTS Error: {e}")
             return False
+    
+    def _synthesize_text(self, text: str) -> bytes:
+        """Generate speech audio for text."""
+        config = SynthesisConfig(
+            length_scale=1.2,
+            noise_scale=0.667,
+            noise_w_scale=0.8,
+            normalize_audio=True,
+            volume=1.0
+        )
+        
+        chunks = list(self.voice.synthesize(text, config))
+        return b''.join([
+            chunk.audio_int16_bytes 
+            for chunk in chunks
+        ])
+    
+    def _generate_silence(self, duration: float) -> bytes:
+        """Generate silence audio."""
+        sample_rate = self.voice.config.sample_rate
+        num_samples = int(sample_rate * duration)
+        silence = np.zeros(num_samples, dtype=np.int16)
+        return silence.tobytes()
     
     def _enhance_audio(self, audio_path: str) -> None:
         """Apply audio enhancements."""

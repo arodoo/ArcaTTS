@@ -48,4 +48,7 @@ python -m modules.tts.cli process-work outputs/manifests/libro_manifest.json 50 
 - **MP3:** 128kbps (~75% ahorro vs WAV)
 - **Tiempo:** ~2-5 min por obra pequeña, ~4.5h para 54 obras
 
+- **Correr el test pipeline:**
+python -m modules.tts.tests.test_chapter
+
 Más detalles: `.github/instructions/project-reference.instructions.md`

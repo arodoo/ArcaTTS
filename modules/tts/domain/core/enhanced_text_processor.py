@@ -26,8 +26,9 @@ class EnhancedTextProcessor:
         add_title_pause: bool = True
     ) -> List[str]:
         """
-        Process work text with minimal intervention.
-        Let Piper handle pauses naturally.
+        Process work text with equalizer-based pauses.
+        
+        Punctuation → periods conversion via PauseConfig.
         """
         text = self.hyphenation.resolve(text)
         text = self._remove_leading_ellipsis(text)
@@ -41,7 +42,7 @@ class EnhancedTextProcessor:
         # Normalize newlines
         text = self._normalize_newlines(text)
         
-        # Only add prosodic markers (no pause conversion)
+        # Convert punctuation to periods (via equalizer)
         text = self.pauser.add_pauses(text)
         
         # Chunk text (only on long silences)
@@ -83,27 +84,38 @@ class EnhancedTextProcessor:
         self, 
         text: str
     ) -> List[str]:
-        """Chunk text, only split on LONG silences (>=1s).
+        """
+        Chunk text, only split on LONG silences (>=1.5s).
         
-        Short pauses (punctuation) stay within text chunks.
+        Short pauses (punctuation <1.5s) stay within chunks.
         This prevents excessive fragmentation.
         """
-        # Only split on long silences (title, paragraph breaks)
-        long_silence_pattern = r'<silence:([1-9]\d*\.?\d*)>'
-        parts = re.split(long_silence_pattern, text)
+        # Split on ALL silence markers
+        pattern = r'<silence:([\d.]+)>'
+        parts = re.split(pattern, text)
         
         chunks = []
         i = 0
+        
         while i < len(parts):
             part = parts[i]
             
             # Check if this is a duration (from split group)
-            if i > 0 and re.match(r'[1-9]\d*\.?\d*', part):
-                # This is a silence duration
-                chunks.append(f"<silence:{part}>")
+            if i > 0 and re.match(r'[\d.]+$', part):
+                duration = float(part)
+                
+                if duration >= 1.5:
+                    # Long silence - create separate chunk
+                    chunks.append(f"<silence:{part}>")
+                else:
+                    # Short silence - append to previous text chunk
+                    if chunks and not chunks[-1].startswith('<silence:'):
+                        chunks[-1] += f" <silence:{part}>"
+                    else:
+                        chunks.append(f"<silence:{part}>")
                 i += 1
             else:
-                # This is text (may contain short silences)
+                # This is text
                 if part.strip():
                     chunks.extend(self.chunker.chunk_text(part))
                 i += 1
