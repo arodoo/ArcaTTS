@@ -24,39 +24,37 @@ class PunctuationPauser:
         """Add SSML-style pauses after punctuation."""
         result = text
         
-        result = re.sub(r'\.\.\.', '...<break:0.8>', result)
-        result = re.sub(r'([.?!;:,—])\s+', 
-                       lambda m: self._get_pause(m.group(1)), 
-                       result)
-        
+        # Paragraph breaks first (multiple newlines = pause)
         result = re.sub(r'\n\n+', '<break:1.0>\n', result)
+        
+        # Handle ellipsis
+        result = re.sub(r'\.\.\.', '...<break:0.8>', result)
+        
+        # Handle punctuation (including end of string)
+        result = re.sub(r'([.?!;:,—])(\s+|$)', 
+                       lambda m: self._get_pause(m.group(1), m.group(2)), 
+                       result)
         
         return result
     
-    def _get_pause(self, punct: str) -> str:
+    def _get_pause(self, punct: str, spacing: str = ' ') -> str:
         """Get pause marker for punctuation."""
         duration = self.PAUSES.get(punct, 0.3)
-        return f"{punct}<break:{duration}> "
+        space = ' ' if spacing else ''
+        return f"{punct}<break:{duration}>{space}"
     
     def convert_to_piper_format(self, text: str) -> str:
-        """Convert break markers to actual pauses.
+        """Convert break markers to silence chunks.
         
-        Piper doesn't support SSML, so we add explicit
-        silence using repeated periods for natural pauses.
-        RAE timing: coma 0.3s, punto 0.7s, etc.
+        Converts <break:X> to <silence:X> for proper
+        WAV silence generation. Piper reads multiple 
+        periods aloud, so we use silence chunks instead.
         """
-        pause_map = {
-            '<break:0.3>': ' ',
-            '<break:0.4>': '. ',
-            '<break:0.5>': '.. ',
-            '<break:0.6>': '... ',
-            '<break:0.7>': '.... ',
-            '<break:0.8>': '..... ',
-            '<break:1.0>': '....... ',
-        }
-        
-        result = text
-        for marker, replacement in pause_map.items():
-            result = result.replace(marker, replacement)
+        # Convert break markers to silence markers
+        result = re.sub(
+            r'<break:([\d.]+)>',
+            r'<silence:\1>',
+            text
+        )
         
         return result

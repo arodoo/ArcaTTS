@@ -4,6 +4,7 @@ TTS Module CLI - Entry point.
 import click
 
 from .commands import parse, process_work, process, test
+from .commands.process_all_cmd import process_all
 
 
 @click.group()
@@ -14,6 +15,7 @@ def cli():
 
 cli.add_command(parse)
 cli.add_command(process_work)
+cli.add_command(process_all)
 cli.add_command(process)
 cli.add_command(test)
 

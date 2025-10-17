@@ -2,20 +2,22 @@
 Enhanced Text Processor - With pauses and conversions.
 """
 from typing import List
-from .text_processor import TextChunker
+from .pause_aware_chunker import PauseAwareChunker
 from .roman_converter import RomanConverter
 from .silence_generator import SilenceGenerator
 from .punctuation_pauser import PunctuationPauser
+from .hyphenation_resolver import HyphenationResolver
 
 
 class EnhancedTextProcessor:
     """Process text with title pauses and Roman conversion."""
     
     def __init__(self, chunk_size: int = 500):
-        self.chunker = TextChunker(chunk_size)
+        self.chunker = PauseAwareChunker(chunk_size)
         self.roman = RomanConverter()
         self.silence = SilenceGenerator()
         self.pauser = PunctuationPauser()
+        self.hyphenation = HyphenationResolver()
     
     def prepare_work_text(
         self, 
@@ -23,6 +25,8 @@ class EnhancedTextProcessor:
         add_title_pause: bool = True
     ) -> List[str]:
         """Process work text with enhancements."""
+        text = self.hyphenation.resolve(text)
+        
         if add_title_pause:
             text = self._add_title_pause(text)
         
