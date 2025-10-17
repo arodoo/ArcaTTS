@@ -2,6 +2,7 @@
 Enhanced Text Processor - With pauses and conversions.
 """
 from typing import List
+import re
 from .pause_aware_chunker import PauseAwareChunker
 from .roman_converter import RomanConverter
 from .silence_generator import SilenceGenerator
@@ -81,24 +82,29 @@ class EnhancedTextProcessor:
         self, 
         text: str
     ) -> List[str]:
-        """Chunk text preserving silence markers."""
-        parts = text.split('<silence:')
-        chunks = []
+        """Chunk text, only split on LONG silences (>=1s).
         
-        for i, part in enumerate(parts):
-            if i == 0:
-                chunks.extend(self.chunker.chunk_text(part))
+        Short pauses (punctuation) stay within text chunks.
+        This prevents excessive fragmentation.
+        """
+        # Only split on long silences (title, paragraph breaks)
+        long_silence_pattern = r'<silence:([1-9]\d*\.?\d*)>'
+        parts = re.split(long_silence_pattern, text)
+        
+        chunks = []
+        i = 0
+        while i < len(parts):
+            part = parts[i]
+            
+            # Check if this is a duration (from split group)
+            if i > 0 and re.match(r'[1-9]\d*\.?\d*', part):
+                # This is a silence duration
+                chunks.append(f"<silence:{part}>")
+                i += 1
             else:
-                duration_end = part.find('>')
-                if duration_end > 0:
-                    duration = part[:duration_end]
-                    rest = part[duration_end + 1:]
-                    
-                    chunks.append(f"<silence:{duration}>")
-                    
-                    if rest.strip():
-                        chunks.extend(
-                            self.chunker.chunk_text(rest)
-                        )
+                # This is text (may contain short silences)
+                if part.strip():
+                    chunks.extend(self.chunker.chunk_text(part))
+                i += 1
         
         return [c for c in chunks if c.strip()]

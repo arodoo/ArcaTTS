@@ -3,6 +3,8 @@ from pathlib import Path
 from piper import PiperVoice
 from piper.config import SynthesisConfig
 import wave
+from .context_analyzer import ContextAnalyzer
+from .synthesis_optimizer import SynthesisOptimizer
 
 
 class TTSEngine:
@@ -24,6 +26,8 @@ class TTSEngine:
         self.language = language
         self.voice = None
         self.enhance_quality = enhance_quality
+        self.context_analyzer = ContextAnalyzer()
+        self.optimizer = SynthesisOptimizer()
     
     def load_model(self) -> None:
         """Load Piper voice model."""
@@ -53,7 +57,10 @@ class TTSEngine:
         speed: float = 1.0,
         sentence_silence: float = 0.2
     ) -> bool:
-        """Generate audio from text with quality settings."""
+        """
+        Generate audio with context-aware synthesis.
+        Uses dynamic parameters for naturalness.
+        """
         if not self.voice:
             self.load_model()
         
@@ -63,11 +70,17 @@ class TTSEngine:
                 exist_ok=True
             )
             
-            # Configure synthesis for better quality
+            # Analyze text context
+            context = self.context_analyzer.analyze(text)
+            params = self.optimizer.optimize(context)
+            
+            # Configure with optimized parameters
+            # NOTE: length_scale should be 1.0/speed for normal pacing
+            # Context params only adjust noise (expressiveness)
             config = SynthesisConfig(
                 length_scale=1.0 / speed,
-                noise_scale=0.667,
-                noise_w_scale=0.8,
+                noise_scale=params.noise_scale,
+                noise_w_scale=params.noise_w_scale,
                 normalize_audio=True,
                 volume=1.0
             )
