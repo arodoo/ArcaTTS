@@ -24,11 +24,13 @@ class PunctuationPauser:
         """Add SSML-style pauses after punctuation."""
         result = text
         
-        # Paragraph breaks first (multiple newlines = pause)
-        result = re.sub(r'\n\n+', '<break:1.0>\n', result)
-        
-        # Handle ellipsis
+        # Handle ellipsis first (before other periods)
         result = re.sub(r'\.\.\.', '...<break:0.8>', result)
+        
+        # Dialogue dashes: add pause after opening/closing
+        # Pattern: -palabra... palabra-
+        result = re.sub(r'-([¿¡])', r'<break:0.4>-\1', result)  # -¿
+        result = re.sub(r'([?!])-', r'\1-<break:0.4>', result)  # ?-
         
         # Handle punctuation (including end of string)
         result = re.sub(r'([.?!;:,—])(\s+|$)', 
