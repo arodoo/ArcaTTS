@@ -6,11 +6,12 @@ from pathlib import Path
 import json
 
 from modules.tts.domain.tts_engine import TTSEngine
-from modules.tts.domain.text_processor import ChapterProcessor
+from modules.tts.domain.enhanced_text_processor import EnhancedTextProcessor
 from modules.tts.domain.work_processor import WorkExtractor
 from modules.tts.domain.manifest import Manifest
 from modules.tts.domain.wav_merger import WavMerger
 from modules.tts.domain.mp3_converter import Mp3Converter
+from modules.tts.domain.silence_generator import SilenceGenerator
 
 
 @click.command()
@@ -58,7 +59,10 @@ def _synthesize_work(work, extractor, output_dir, language):
     """Generate and merge audio."""
     work_dir = output_dir / work.folder_name
     
-    chunks = ChapterProcessor().prepare_chapter(extractor.extract(work))
+    processor = EnhancedTextProcessor()
+    text = extractor.extract(work)
+    chunks = processor.prepare_work_text(text, add_title_pause=True)
+    
     click.echo(f"Chunks: {len(chunks)}")
     
     _generate_chunks(chunks, work_dir, language)
@@ -66,12 +70,21 @@ def _synthesize_work(work, extractor, output_dir, language):
 
 
 def _generate_chunks(chunks, work_dir, language):
-    """Generate TTS audio chunks."""
+    """Generate TTS audio chunks with silence support."""
     engine = TTSEngine(language=language)
+    silence_gen = SilenceGenerator()
     
     for i, chunk in enumerate(chunks):
         click.echo(f"[{i+1}/{len(chunks)}]")
-        engine.synthesize(chunk, str(work_dir / f"chunk_{i:03d}.wav"))
+        
+        if chunk.startswith('<silence:'):
+            duration = float(chunk.split(':')[1].rstrip('>'))
+            silence_gen.generate_silence(
+                duration,
+                str(work_dir / f"chunk_{i:03d}.wav")
+            )
+        else:
+            engine.synthesize(chunk, str(work_dir / f"chunk_{i:03d}.wav"))
 
 
 def _merge_audio(work_dir):
