@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import List
 import json
 
-from .manifest import Work
+from modules.tts.domain.manifest import Work
 
 
 class WorkExtractor:

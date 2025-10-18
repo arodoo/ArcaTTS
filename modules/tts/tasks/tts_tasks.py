@@ -1,5 +1,5 @@
 from infrastructure.celery.celeryconfig import app
-from modules.tts.domain.tts_engine import TTSEngine
+from modules.tts.domain.core.tts_engine import TTSEngine
 from modules.tts.domain.audio_merger import ChapterMerger
 from modules.tts.storage.minio_client import MinIOClient
 from pathlib import Path

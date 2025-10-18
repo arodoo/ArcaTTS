@@ -4,8 +4,8 @@ Process Command - Full chapter processing.
 import click
 from pathlib import Path
 
-from modules.tts.domain.tts_engine import TTSEngine
-from modules.tts.domain.text_processor import ChapterProcessor
+from modules.tts.domain.core.tts_engine import TTSEngine
+from modules.tts.domain.core.text_processor import ChapterProcessor
 
 
 @click.command()

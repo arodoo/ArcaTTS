@@ -40,6 +40,9 @@ rm -rf outputs/autor/*
 # Regenerar obra específica
 rm -rf outputs/autor/50_TITULO
 python -m modules.tts.cli process-work outputs/manifests/libro_manifest.json 50 --output outputs/autor
+
+
+
 ```
 
 ## Configuración
