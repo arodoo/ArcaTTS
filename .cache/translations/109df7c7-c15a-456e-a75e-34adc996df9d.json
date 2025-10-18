@@ -1,0 +1,131 @@
+{
+  "translation_id": "109df7c7-c15a-456e-a75e-34adc996df9d",
+  "original_text": "FRANZ KAFKA\n\nAMÉRICA\n\n2003 - Reservados todos los derechos\nPermitido el uso sin fines comerciales\n\nFRANZ KAFKA\n\nAMÉRICA\nCAPÍTULO PRIMERO\n\nEL FOGONERO\n\nCUANDO Karl Rossmann -muchacho de dieciséis años de edad a quien sus pobres padres\nenviaban a América porque lo había seducido una sirvienta que luego tuvo de él un hijoentraba en el puerto de Nueva York, a bordo de ese vapor que ya había aminorado su\nmarcha, vio de pronto la estatua de la diosa de la libertad, que desde hacía rato venía\nobservando, como si ahora estuviese iluminada por un rayo de sol más intenso. Su brazo\ncon la espada se irguió como con un renovado movimiento, y en torno a su figura soplaron\nlos aires libres.\n«¡Qué alta!», se dijo, y como ni siquiera se le ocurría retirarse, la creciente multitud de los\nmozos de cuerda que junto a él desfilaba fue desplazándolo, poco a poco, hasta la borda.\nUn joven con el cual habla trabado fugaz relación durante la travesía le dijo al pasar:\n-Pero, ¿no tiene usted ganas de bajar?\n-Claro que sí; ya estoy preparado -dijo Karl, riéndose al mirarlo; y lleno de alegría, alzó su\nbaúl y lo cargó sobre un hombro, pues era un muchacho fuerte. Pero al seguir con la vista a\nese conocido suyo que agitando ligeramente su bastón ya se alejaba con los demás, notó\nconsternado que había olvidado su propio paraguas abajo, en el interior del barco. Sin\ndemora, rogó a su conocido -quien no pareció alegrarse mucho- que aguardara un instante\njunto a su baúl; recorrió con una mirada el lugar, para poder encontrarlo a su regreso, y se\nalejó presuroso.\nAbajo, se sorprendió desagradablemente al ver que el pasillo que hubiera acortado en forma\nconsiderable su camino estaba cerrado -cosa que probablemente se relacionaba con el\ndesembarco de la totalidad de los pasajeros-, y así tuvo que buscar penosamente, a través de\ncorredores que doblaban sin cesar y de un cuarto vacío donde había un escritorio\nabandonado, escaleras que se sucedían sin fin unas a otras, hasta que terminó por\nextraviarse completamente, pues sólo en una o dos oportunidades había tomado por ese\ncamino, y siempre acompañado de otras personas. En su desconcierto, y además porque no\n\ntopaba con ningún ser humano, y porque sólo oía incesantemente el arrastrarse de los mil\npies humanos por encima de su cabeza, y percibía, a lo lejos, como un apagado jadeo, las\núltimas operaciones de las máquinas ya paradas, se puso a golpear, sin pensarlo, en una\npuerta cualquiera, junto a la cual se había detenido de pronto, interrumpiendo su andar\nerrabundo.\n-Pero si está abierto -oyóse una voz desde adentro; y Karl, con verdadero alivio, abrió la\npuerta.\n",
+  "language_pair": {
+    "source": "es",
+    "target": "pt"
+  },
+  "chunks": [
+    {
+      "chunk_id": "cdd04679-73ac-40fe-9971-c5b82b6c6dfb",
+      "original_text": "FRANZ KAFKA",
+      "translated_text": "FRANÇESCO KAFFKA.",
+      "start_position": 0,
+      "end_position": 11,
+      "context_before": "",
+      "context_after": "AMÉRICA 2003 - Reservados todos los derechos\nPermitido el uso sin fines comerciales"
+    },
+    {
+      "chunk_id": "2fdf0352-f573-400e-b003-f7ee11b6e6f4",
+      "original_text": "AMÉRICA",
+      "translated_text": "AMERICA → AMÉRICA →",
+      "start_position": 13,
+      "end_position": 20,
+      "context_before": "FRANZ KAFKA",
+      "context_after": "2003 - Reservados todos los derechos\nPermitido el uso sin fines comerciales FRANZ KAFKA"
+    },
+    {
+      "chunk_id": "6b986bba-1d4f-4d11-8998-960d062cbd12",
+      "original_text": "2003 - Reservados todos los derechos\nPermitido el uso sin fines comerciales",
+      "translated_text": "2003 - Reservados todos os direitos\nPermitido o uso sem fins comerciais",
+      "start_position": 22,
+      "end_position": 97,
+      "context_before": "FRANZ KAFKA AMÉRICA",
+      "context_after": "FRANZ KAFKA AMÉRICA\nCAPÍTULO PRIMERO"
+    },
+    {
+      "chunk_id": "e53a46d7-f733-48c1-b4bd-368a2f3e402b",
+      "original_text": "FRANZ KAFKA",
+      "translated_text": "FRANÇESCO KAFFKA.",
+      "start_position": 99,
+      "end_position": 110,
+      "context_before": "AMÉRICA 2003 - Reservados todos los derechos\nPermitido el uso sin fines comerciales",
+      "context_after": "AMÉRICA\nCAPÍTULO PRIMERO EL FOGONERO"
+    },
+    {
+      "chunk_id": "1dc3740f-6b83-41f9-9e38-b9fb3683beae",
+      "original_text": "AMÉRICA\nCAPÍTULO PRIMERO",
+      "translated_text": "ESTADOS\nUNIDOS CAPÍTULO\nPRIMEIRO.",
+      "start_position": 112,
+      "end_position": 136,
+      "context_before": "2003 - Reservados todos los derechos\nPermitido el uso sin fines comerciales FRANZ KAFKA",
+      "context_after": "EL FOGONERO CUANDO Karl Rossmann -muchacho de dieciséis años de edad a quien sus pobres padres\nenviaban a América porque lo había seducido una sirvienta que luego tuvo de él un hijoentraba en el puerto de Nueva York, a bordo de ese vapor que ya había aminorado su\nmarcha, vio de pronto la estatua de la diosa de la libertad, que desde hacía rato venía\nobservando, como si ahora estuviese iluminada por un rayo de sol más intenso. Su brazo\ncon la espada se irguió como con un renovado movimiento, y en torno a su figura soplaron\nlos aires libres.\n«¡Qué alta!», se dijo, y como ni siquiera se le ocurría retirarse, la creciente multitud de los\nmozos de cuerda que junto a él desfilaba fue desplazándolo, poco a poco, hasta la borda.\nUn joven con el cual habla trabado fugaz relación durante la travesía le dijo al pasar:\n-Pero, ¿no tiene usted ganas de bajar?\n-Claro que sí; ya estoy preparado -dijo Karl, riéndose al mirarlo; y lleno de alegría, alzó su\nbaúl y lo cargó sobre un hombro, pues era un muchacho fuerte. Pero al seguir con la vista a\nese conocido suyo que agitando ligeramente su bastón ya se alejaba con los demás, notó\nconsternado que había olvidado su propio paraguas abajo, en el interior del barco. Sin\ndemora, rogó a su conocido -quien no pareció alegrarse mucho- que aguardara un instante\njunto a su baúl; recorrió con una mirada el lugar, para poder encontrarlo a su regreso, y se\nalejó presuroso.\nAbajo, se sorprendió desagradablemente al ver que el pasillo que hubiera acortado en forma\nconsiderable su camino estaba cerrado -cosa que probablemente se relacionaba con el\ndesembarco de la totalidad de los pasajeros-, y así tuvo que buscar penosamente, a través de\ncorredores que doblaban sin cesar y de un cuarto vacío donde había un escritorio\nabandonado, escaleras que se sucedían sin fin unas a otras, hasta que terminó por\nextraviarse completamente, pues sólo en una o dos oportunidades había tomado por ese\ncamino, y siempre acompañado de otras personas. En su desconcierto, y además porque no"
+    },
+    {
+      "chunk_id": "52db1efb-ec94-4a9d-8ca1-edae26da0aa3",
+      "original_text": "EL FOGONERO",
+      "translated_text": "FOGO DO FOGO DE FOGO",
+      "start_position": 138,
+      "end_position": 149,
+      "context_before": "FRANZ KAFKA AMÉRICA\nCAPÍTULO PRIMERO",
+      "context_after": "CUANDO Karl Rossmann -muchacho de dieciséis años de edad a quien sus pobres padres\nenviaban a América porque lo había seducido una sirvienta que luego tuvo de él un hijoentraba en el puerto de Nueva York, a bordo de ese vapor que ya había aminorado su\nmarcha, vio de pronto la estatua de la diosa de la libertad, que desde hacía rato venía\nobservando, como si ahora estuviese iluminada por un rayo de sol más intenso. Su brazo\ncon la espada se irguió como con un renovado movimiento, y en torno a su figura soplaron\nlos aires libres.\n«¡Qué alta!», se dijo, y como ni siquiera se le ocurría retirarse, la creciente multitud de los\nmozos de cuerda que junto a él desfilaba fue desplazándolo, poco a poco, hasta la borda.\nUn joven con el cual habla trabado fugaz relación durante la travesía le dijo al pasar:\n-Pero, ¿no tiene usted ganas de bajar?\n-Claro que sí; ya estoy preparado -dijo Karl, riéndose al mirarlo; y lleno de alegría, alzó su\nbaúl y lo cargó sobre un hombro, pues era un muchacho fuerte. Pero al seguir con la vista a\nese conocido suyo que agitando ligeramente su bastón ya se alejaba con los demás, notó\nconsternado que había olvidado su propio paraguas abajo, en el interior del barco. Sin\ndemora, rogó a su conocido -quien no pareció alegrarse mucho- que aguardara un instante\njunto a su baúl; recorrió con una mirada el lugar, para poder encontrarlo a su regreso, y se\nalejó presuroso.\nAbajo, se sorprendió desagradablemente al ver que el pasillo que hubiera acortado en forma\nconsiderable su camino estaba cerrado -cosa que probablemente se relacionaba con el\ndesembarco de la totalidad de los pasajeros-, y así tuvo que buscar penosamente, a través de\ncorredores que doblaban sin cesar y de un cuarto vacío donde había un escritorio\nabandonado, escaleras que se sucedían sin fin unas a otras, hasta que terminó por\nextraviarse completamente, pues sólo en una o dos oportunidades había tomado por ese\ncamino, y siempre acompañado de otras personas. En su desconcierto, y además porque no topaba con ningún ser humano, y porque sólo oía incesantemente el arrastrarse de los mil\npies humanos por encima de su cabeza, y percibía, a lo lejos, como un apagado jadeo, las\núltimas operaciones de las máquinas ya paradas, se puso a golpear, sin pensarlo, en una\npuerta cualquiera, junto a la cual se había detenido de pronto, interrumpiendo su andar\nerrabundo.\n-Pero si está abierto -oyóse una voz desde adentro; y Karl, con verdadero alivio, abrió la\npuerta."
+    },
+    {
+      "chunk_id": "5e19be61-f8cc-4fde-ac84-1c7843c336e3",
+      "original_text": "CUANDO Karl Rossmann -muchacho de dieciséis años de edad a quien sus pobres padres\nenviaban a América porque lo había seducido una sirvienta que luego tuvo de él un hijoentraba en el puerto de Nueva York, a bordo de ese vapor que ya había aminorado su\nmarcha, vio de pronto la estatua de la diosa de la libertad, que desde hacía rato venía\nobservando, como si ahora estuviese iluminada por un rayo de sol más intenso.",
+      "translated_text": "Quando Karl Rossmann, um rapaz de 16 anos a quem seus pobres pais enviavam\npara a América porque o havia seduzido uma servidão que depois teve de ele um filho entrava no porto de Nova York, a bordo daquele vapor que já tinha ameaçado sua marcha,\nviu de repente a estátua da deusa da liberdade, que desde fazia tempo vinda observando, como se\nagora estivesse iluminada por um raio de sol mais intenso.",
+      "start_position": 151,
+      "end_position": 568,
+      "context_before": "AMÉRICA\nCAPÍTULO PRIMERO EL FOGONERO",
+      "context_after": "topaba con ningún ser humano, y porque sólo oía incesantemente el arrastrarse de los mil\npies humanos por encima de su cabeza, y percibía, a lo lejos, como un apagado jadeo, las\núltimas operaciones de las máquinas ya paradas, se puso a golpear, sin pensarlo, en una\npuerta cualquiera, junto a la cual se había detenido de pronto, interrumpiendo su andar\nerrabundo.\n-Pero si está abierto -oyóse una voz desde adentro; y Karl, con verdadero alivio, abrió la\npuerta."
+    },
+    {
+      "chunk_id": "8169c3a8-9716-4b4f-8c89-14dc6902b737",
+      "original_text": "Su brazo\ncon la espada se irguió como con un renovado movimiento, y en torno a su figura soplaron\nlos aires libres.\n«¡Qué alta!», se dijo, y como ni siquiera se le ocurría retirarse, la creciente multitud de los\nmozos de cuerda que junto a él desfilaba fue desplazándolo, poco a poco, hasta la borda.",
+      "translated_text": "Seu braço\ncom a espada irguia-se como com um renovado movimento, e ao redor de sua figura sopraram os\naires livres. «Que\nalta! », disse-se, e como nem sequer se lhe ocorria retirar-Se, a crescente multidão dos jovens de\ncorda que junto a ele desfilava foi deslocando-o, pouco a pouco, até a borda.",
+      "start_position": 569,
+      "end_position": 869,
+      "context_before": "AMÉRICA\nCAPÍTULO PRIMERO EL FOGONERO",
+      "context_after": "topaba con ningún ser humano, y porque sólo oía incesantemente el arrastrarse de los mil\npies humanos por encima de su cabeza, y percibía, a lo lejos, como un apagado jadeo, las\núltimas operaciones de las máquinas ya paradas, se puso a golpear, sin pensarlo, en una\npuerta cualquiera, junto a la cual se había detenido de pronto, interrumpiendo su andar\nerrabundo.\n-Pero si está abierto -oyóse una voz desde adentro; y Karl, con verdadero alivio, abrió la\npuerta."
+    },
+    {
+      "chunk_id": "6fc211ec-db61-4433-ac38-9a3d0cc06f6f",
+      "original_text": "Un joven con el cual habla trabado fugaz relación durante la travesía le dijo al pasar:\n-Pero, ¿no tiene usted ganas de bajar?\n-Claro que sí; ya estoy preparado -dijo Karl, riéndose al mirarlo; y lleno de alegría, alzó su\nbaúl y lo cargó sobre un hombro, pues era un muchacho fuerte.",
+      "translated_text": "Um jovem com quem fala trabalhado fugaz relacionamento durante a travessia disse-lhe ao passar: - Mas\nvocê não tem vontade de baixar? -\nClaro que sim; já estou preparado - disse Karl, rindo ao olhar para ele; e cheio de\nalegria, levantou o seu bal e o carregou sobre um ombro, pois\nera um menino forte.",
+      "start_position": 870,
+      "end_position": 1153,
+      "context_before": "AMÉRICA\nCAPÍTULO PRIMERO EL FOGONERO",
+      "context_after": "topaba con ningún ser humano, y porque sólo oía incesantemente el arrastrarse de los mil\npies humanos por encima de su cabeza, y percibía, a lo lejos, como un apagado jadeo, las\núltimas operaciones de las máquinas ya paradas, se puso a golpear, sin pensarlo, en una\npuerta cualquiera, junto a la cual se había detenido de pronto, interrumpiendo su andar\nerrabundo.\n-Pero si está abierto -oyóse una voz desde adentro; y Karl, con verdadero alivio, abrió la\npuerta."
+    },
+    {
+      "chunk_id": "67d4911b-debc-4341-90cf-43298d415296",
+      "original_text": "Pero al seguir con la vista a\nese conocido suyo que agitando ligeramente su bastón ya se alejaba con los demás, notó\nconsternado que había olvidado su propio paraguas abajo, en el interior del barco. Sin\ndemora, rogó a su conocido -quien no pareció alegrarse mucho- que aguardara un instante\njunto a su baúl; recorrió con una mirada el lugar, para poder encontrarlo a su regreso, y se\nalejó presuroso.",
+      "translated_text": "Mas ao seguir com a vista a\nesse conhecido seu que agitando ligeiramente o seu bastão já se afastava com os outros,\nnotou consternado que tinha esquecido suas próprias paraguas abaixo, no interior do barco. Sem\ndemora, pediu ao seu conhecido – quem não parecia alegrar-se muito – que aguardasse\num instante junto ao seu baul; percorreu com uma olhada o lugar, para poder encontrá-lo ao seu retorno,\ne se\nafasta presuroso.",
+      "start_position": 1154,
+      "end_position": 1555,
+      "context_before": "AMÉRICA\nCAPÍTULO PRIMERO EL FOGONERO",
+      "context_after": "topaba con ningún ser humano, y porque sólo oía incesantemente el arrastrarse de los mil\npies humanos por encima de su cabeza, y percibía, a lo lejos, como un apagado jadeo, las\núltimas operaciones de las máquinas ya paradas, se puso a golpear, sin pensarlo, en una\npuerta cualquiera, junto a la cual se había detenido de pronto, interrumpiendo su andar\nerrabundo.\n-Pero si está abierto -oyóse una voz desde adentro; y Karl, con verdadero alivio, abrió la\npuerta."
+    },
+    {
+      "chunk_id": "fd9c68a7-7625-4af5-9ab1-c9123775f7bf",
+      "original_text": "Abajo, se sorprendió desagradablemente al ver que el pasillo que hubiera acortado en forma\nconsiderable su camino estaba cerrado -cosa que probablemente se relacionaba con el\ndesembarco de la totalidad de los pasajeros-, y así tuvo que buscar penosamente, a través de\ncorredores que doblaban sin cesar y de un cuarto vacío donde había un escritorio\nabandonado, escaleras que se sucedían sin fin unas a otras, hasta que terminó por\nextraviarse completamente, pues sólo en una o dos oportunidades había tomado por ese\ncamino, y siempre acompañado de otras personas.",
+      "translated_text": "Abaixo, surpreendeu-se desagradavelmente ao ver que o corredor que teria cortado em forma considerável\no seu caminho estava fechado – o que provavelmente se relacionava com\no desembarque da totalidade dos passageiros – e assim teve que procurar penosamente, através de corredores\nque dobravam sem cessação e de um quarto vazio onde havia um escritório abandonado,\nescadas que se sucederam sem fim umas às outras, até que acabou por se\nextraviar completamente, pois apenas em uma ou duas ocasiões tinha tomado por esse\ncaminho, e sempre acompanhado de outras pessoas.",
+      "start_position": 1556,
+      "end_position": 2119,
+      "context_before": "AMÉRICA\nCAPÍTULO PRIMERO EL FOGONERO",
+      "context_after": "topaba con ningún ser humano, y porque sólo oía incesantemente el arrastrarse de los mil\npies humanos por encima de su cabeza, y percibía, a lo lejos, como un apagado jadeo, las\núltimas operaciones de las máquinas ya paradas, se puso a golpear, sin pensarlo, en una\npuerta cualquiera, junto a la cual se había detenido de pronto, interrumpiendo su andar\nerrabundo.\n-Pero si está abierto -oyóse una voz desde adentro; y Karl, con verdadero alivio, abrió la\npuerta."
+    },
+    {
+      "chunk_id": "a60a5d85-9fbd-4c11-a74f-4ec403dccb05",
+      "original_text": "En su desconcierto, y además porque no",
+      "translated_text": "Em seu desconforto, e, além disso, porque não",
+      "start_position": 2120,
+      "end_position": 2158,
+      "context_before": "AMÉRICA\nCAPÍTULO PRIMERO EL FOGONERO",
+      "context_after": "topaba con ningún ser humano, y porque sólo oía incesantemente el arrastrarse de los mil\npies humanos por encima de su cabeza, y percibía, a lo lejos, como un apagado jadeo, las\núltimas operaciones de las máquinas ya paradas, se puso a golpear, sin pensarlo, en una\npuerta cualquiera, junto a la cual se había detenido de pronto, interrumpiendo su andar\nerrabundo.\n-Pero si está abierto -oyóse una voz desde adentro; y Karl, con verdadero alivio, abrió la\npuerta."
+    },
+    {
+      "chunk_id": "e933d22b-14ce-4a02-82ae-b3512aa4e2e3",
+      "original_text": "topaba con ningún ser humano, y porque sólo oía incesantemente el arrastrarse de los mil\npies humanos por encima de su cabeza, y percibía, a lo lejos, como un apagado jadeo, las\núltimas operaciones de las máquinas ya paradas, se puso a golpear, sin pensarlo, en una\npuerta cualquiera, junto a la cual se había detenido de pronto, interrumpiendo su andar\nerrabundo.\n-Pero si está abierto -oyóse una voz desde adentro; y Karl, con verdadero alivio, abrió la\npuerta.",
+      "translated_text": "Ele se encontrou com nenhum ser humano, e porque só ouvia incessantemente o arrastrar-se dos\nmil pés humanos por cima de sua cabeça, e percebia, longe, como um apagado jadeo, as últimas\noperações das máquinas já paradas, começou a bater, sem pensar, em uma porta qualquer, junto\nà qual ele se havia detido de repente, interrompendo seu andar errabundo. - Mas\nse\nestá aberto - ouviu-se uma voz de dentro; e Karl, com verdadeiro alívio, abriu a porta.",
+      "start_position": 2160,
+      "end_position": 2623,
+      "context_before": "EL FOGONERO CUANDO Karl Rossmann -muchacho de dieciséis años de edad a quien sus pobres padres\nenviaban a América porque lo había seducido una sirvienta que luego tuvo de él un hijoentraba en el puerto de Nueva York, a bordo de ese vapor que ya había aminorado su\nmarcha, vio de pronto la estatua de la diosa de la libertad, que desde hacía rato venía\nobservando, como si ahora estuviese iluminada por un rayo de sol más intenso. Su brazo\ncon la espada se irguió como con un renovado movimiento, y en torno a su figura soplaron\nlos aires libres.\n«¡Qué alta!», se dijo, y como ni siquiera se le ocurría retirarse, la creciente multitud de los\nmozos de cuerda que junto a él desfilaba fue desplazándolo, poco a poco, hasta la borda.\nUn joven con el cual habla trabado fugaz relación durante la travesía le dijo al pasar:\n-Pero, ¿no tiene usted ganas de bajar?\n-Claro que sí; ya estoy preparado -dijo Karl, riéndose al mirarlo; y lleno de alegría, alzó su\nbaúl y lo cargó sobre un hombro, pues era un muchacho fuerte. Pero al seguir con la vista a\nese conocido suyo que agitando ligeramente su bastón ya se alejaba con los demás, notó\nconsternado que había olvidado su propio paraguas abajo, en el interior del barco. Sin\ndemora, rogó a su conocido -quien no pareció alegrarse mucho- que aguardara un instante\njunto a su baúl; recorrió con una mirada el lugar, para poder encontrarlo a su regreso, y se\nalejó presuroso.\nAbajo, se sorprendió desagradablemente al ver que el pasillo que hubiera acortado en forma\nconsiderable su camino estaba cerrado -cosa que probablemente se relacionaba con el\ndesembarco de la totalidad de los pasajeros-, y así tuvo que buscar penosamente, a través de\ncorredores que doblaban sin cesar y de un cuarto vacío donde había un escritorio\nabandonado, escaleras que se sucedían sin fin unas a otras, hasta que terminó por\nextraviarse completamente, pues sólo en una o dos oportunidades había tomado por ese\ncamino, y siempre acompañado de otras personas. En su desconcierto, y además porque no",
+      "context_after": ""
+    }
+  ],
+  "glossary": {},
+  "created_at": "2025-10-18T12:09:06.836066",
+  "completed_at": "2025-10-18T12:10:35.817906",
+  "final_translation": "FRANÇESCO KAFFKA.\n\nAMERICA → AMÉRICA →\n\n2003 - Reservados todos os direitos\nPermitido o uso sem fins comerciais\n\nFRANÇESCO KAFFKA.\n\nESTADOS\nUNIDOS CAPÍTULO\nPRIMEIRO.\n\nFOGO DO FOGO DE FOGO\n\nQuando Karl Rossmann, um rapaz de 16 anos a quem seus pobres pais enviavam\npara a América porque o havia seduzido uma servidão que depois teve de ele um filho entrava no porto de Nova York, a bordo daquele vapor que já tinha ameaçado sua marcha,\nviu de repente a estátua da deusa da liberdade, que desde fazia tempo vinda observando, como se\nagora estivesse iluminada por um raio de sol mais intenso. Seu braço\ncom a espada irguia-se como com um renovado movimento, e ao redor de sua figura sopraram os\naires livres. «Que\nalta! », disse-se, e como nem sequer se lhe ocorria retirar-Se, a crescente multidão dos jovens de\ncorda que junto a ele desfilava foi deslocando-o, pouco a pouco, até a borda.\nUm jovem com quem fala trabalhado fugaz relacionamento durante a travessia disse-lhe ao passar: - Mas\nvocê não tem vontade de baixar? -\nClaro que sim; já estou preparado - disse Karl, rindo ao olhar para ele; e cheio de\nalegria, levantou o seu bal e o carregou sobre um ombro, pois\nera um menino forte. Mas ao seguir com a vista a\nesse conhecido seu que agitando ligeiramente o seu bastão já se afastava com os outros,\nnotou consternado que tinha esquecido suas próprias paraguas abaixo, no interior do barco. Sem\ndemora, pediu ao seu conhecido – quem não parecia alegrar-se muito – que aguardasse\num instante junto ao seu baul; percorreu com uma olhada o lugar, para poder encontrá-lo ao seu retorno,\ne se\nafasta presuroso.\nAbaixo, surpreendeu-se desagradavelmente ao ver que o corredor que teria cortado em forma considerável\no seu caminho estava fechado – o que provavelmente se relacionava com\no desembarque da totalidade dos passageiros – e assim teve que procurar penosamente, através de corredores\nque dobravam sem cessação e de um quarto vazio onde havia um escritório abandonado,\nescadas que se sucederam sem fim umas às outras, até que acabou por se\nextraviar completamente, pois apenas em uma ou duas ocasiões tinha tomado por esse\ncaminho, e sempre acompanhado de outras pessoas. Em seu desconforto, e, além disso, porque não\n\nEle se encontrou com nenhum ser humano, e porque só ouvia incessantemente o arrastrar-se dos\nmil pés humanos por cima de sua cabeça, e percebia, longe, como um apagado jadeo, as últimas\noperações das máquinas já paradas, começou a bater, sem pensar, em uma porta qualquer, junto\nà qual ele se havia detido de repente, interrompendo seu andar errabundo. - Mas\nse\nestá aberto - ouviu-se uma voz de dentro; e Karl, com verdadeiro alívio, abriu a porta.\n"
+}
